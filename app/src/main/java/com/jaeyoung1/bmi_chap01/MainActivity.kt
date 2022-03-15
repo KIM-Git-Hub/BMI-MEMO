@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     private var mBackWait: Long = 0
 
-
+//test
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
