@@ -6,10 +6,7 @@ import android.text.Editable
 import android.util.Log
 import android.view.*
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.jaeyoung1.bmi_chap01.Roomdb.AppDatabase
 import com.jaeyoung1.bmi_chap01.Roomdb.Contacts
@@ -26,7 +23,7 @@ class MemoAdapter(private val itemList: List<Contacts>) :
             val bmiNum = view.findViewById<TextView>(R.id.bmiNumItem)
             val bmiString = view.findViewById<TextView>(R.id.bmiStringItem)
             val dbId = view.findViewById<TextView>(R.id.dbId)
-            val deleteButton = view.findViewById<Button>(R.id.deleteButton)
+            val deleteButton = view.findViewById<ImageView>(R.id.deleteButton)
             val year = view.findViewById<TextView>(R.id.year)
             val month = view.findViewById<TextView>(R.id.month)
             val day = view.findViewById<TextView>(R.id.day)

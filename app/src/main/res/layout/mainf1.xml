@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:id="@+id/memoF1Linear"
+    android:layout_weight="10"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
@@ -31,6 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:inputType="number" />
 
         <TextView
@@ -43,6 +46,8 @@
 
         <EditText
             android:id="@+id/weight"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"

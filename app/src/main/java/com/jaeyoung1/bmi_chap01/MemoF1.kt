@@ -36,6 +36,8 @@ class MemoF1 : Fragment() {
         binding.memoF1Linear.setOnClickListener {
             imm.hideSoftInputFromWindow(binding.height.windowToken, 0)
             imm.hideSoftInputFromWindow(binding.weight.windowToken, 0)
+            binding.height.clearFocus()
+            binding.weight.clearFocus()
         }
 
         binding.result.setOnClickListener {
