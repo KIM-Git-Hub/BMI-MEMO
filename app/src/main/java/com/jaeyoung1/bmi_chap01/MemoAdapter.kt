@@ -2,7 +2,6 @@ package com.jaeyoung1.bmi_chap01
 
 
 import android.content.Context.INPUT_METHOD_SERVICE
-import android.text.Editable
 import android.util.Log
 import android.view.*
 import android.view.inputmethod.InputMethodManager
@@ -15,7 +14,7 @@ import com.jaeyoung1.bmi_chap01.Roomdb.Contacts
 class MemoAdapter(private val itemList: List<Contacts>) :
     RecyclerView.Adapter<MemoAdapter.ContactsViewHolder>() {
 
-    var checkBoxCode = MemoF2.chekBoxCode
+    var allMemoCode = MemoF2.allMemoCode
 
     inner class ContactsViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         var db: AppDatabase? = null
@@ -47,12 +46,12 @@ class MemoAdapter(private val itemList: List<Contacts>) :
             val imm = context.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
             db = AppDatabase.getInstance(context)
 
-            if (checkBoxCode == 1) {
-                Log.d("sex2", checkBoxCode.toString())
+            if (allMemoCode == 1) {
+                Log.d("sex2", allMemoCode.toString())
                 listItem.visibility = View.VISIBLE
             }
 
-            if (checkBoxCode == 0) {
+            if (allMemoCode == 0) {
                 while (true) {
 
                     if (year.text.toString() != MemoF2.currentYear.toString() || month.text.toString() != MemoF2.currentMonth.toString()) {
