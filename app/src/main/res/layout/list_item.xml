@@ -1,198 +1,203 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/list_item"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/list_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/memo"
-        android:orientation="vertical"
-        android:paddingStart="5dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="2dp"
-        android:paddingEnd="5dp">
+        android:layout_margin="16dp"
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="end|center"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/year"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|start"
-                    android:textSize="12sp"
-                    tools:text="2022" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:gravity="center|start"
-                    android:text="년 "
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/month"
-                    android:textColor="@color/black"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|start"
-                    android:textSize="12sp"
-                    tools:text="12"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|start"
-                    android:text="월 "
-                    android:textColor="@color/black"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/day"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:gravity="center|start"
-                    android:textSize="12sp"
-                    tools:text="06" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_height="wrap_content"
-                    android:gravity="center|start"
-                    android:text="일"
-                    android:textSize="12sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="end"
-                android:textColor="@color/black"
-                android:orientation="horizontal">
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:gravity="center"
-                    android:text="체중 :"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/weightItem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_marginEnd="10dp"
-                    android:gravity="center"
-                    android:text="정상체중"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:gravity="center|start"
-                    android:text="BMI :"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/bmiNumItem"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:textColor="@color/black"
-                    android:gravity="center|start"
-                    android:text="14.55555"
-                    android:textSize="12sp" />
-
-                <TextView
-                    android:id="@+id/bmiStringItem"
-                    android:layout_width="wrap_content"
-                    android:textColor="@color/black"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="10dp"
-                    android:gravity="center|start"
-                    android:text="정상체중"
-                    android:textSize="12sp" />
-
-                <ImageView
-                    android:id="@+id/deleteButton"
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:gravity="bottom"
-                    android:src="@drawable/delete" />
-
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <View
-            android:layout_marginTop= "5dp"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/black"/>
+        android:orientation="vertical">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:background="@drawable/memo"
+            android:orientation="vertical"
+            android:paddingStart="5dp"
+            android:paddingTop="5dp"
+            android:paddingEnd="5dp"
+            android:paddingBottom="2dp">
 
-            <TextView
-                android:id="@+id/memoTextView"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="top"
-                android:scrollHorizontally="false"
-                android:textColor="@color/black"
-                android:singleLine="false"
-                android:textSize="20sp" />
+                android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/memoEditText"
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end|center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:text="2022" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:text="년 "
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/month"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:text="12" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:text="월 "
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        tools:text="06" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:text="일"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:orientation="horizontal"
+                    android:textColor="@color/black">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="체중 :"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/weightItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center"
+                        android:text="정상체중"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center|start"
+                        android:text="BMI :"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/bmiNumItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center|start"
+                        android:text="14.55555"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/bmiStringItem"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:gravity="center|start"
+                        android:text="정상체중"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:id="@+id/deleteButton"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:gravity="bottom"
+                        android:src="@drawable/delete" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/black" />
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@null"
-                android:gravity="top"
-                android:textColor="@color/black"
-                android:scrollHorizontally="false"
-                android:singleLine="false"
-                android:textSize="20sp"
-                android:visibility="gone" />
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/dbId"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:visibility="gone" />
+                <TextView
+                    android:id="@+id/memoTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:scrollHorizontally="false"
+                    android:singleLine="false"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
 
+                <EditText
+                    android:id="@+id/memoEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:scrollHorizontally="false"
+                    android:singleLine="false"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/dbId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
 
         </LinearLayout>
-
     </LinearLayout>
 
-
-</LinearLayout>
+</FrameLayout>

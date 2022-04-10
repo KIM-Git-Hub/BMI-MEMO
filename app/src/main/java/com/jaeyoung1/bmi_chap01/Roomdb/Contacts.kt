@@ -1,6 +1,5 @@
 package com.jaeyoung1.bmi_chap01.Roomdb
 
-import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 

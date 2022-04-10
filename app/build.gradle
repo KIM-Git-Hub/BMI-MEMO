@@ -8,6 +8,7 @@ plugins {
 apply plugin: "androidx.navigation.safeargs.kotlin"
 apply plugin: 'kotlin-kapt'
 
+
 android {
     compileSdkVersion 31
     buildToolsVersion "30.0.3"
@@ -85,6 +86,8 @@ dependencies {
     implementation 'com.facebook.stetho:stetho:1.5.1' //크롬으로 db조회
 
     implementation 'com.google.android.material:material:1.5.0'
+
+    kapt "org.xerial:sqlite-jdbc:3.34.0" //맥북m1 room 충돌
 
 
 }

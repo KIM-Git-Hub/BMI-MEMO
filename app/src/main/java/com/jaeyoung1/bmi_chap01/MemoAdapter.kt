@@ -15,8 +15,11 @@ import com.jaeyoung1.bmi_chap01.Roomdb.Contacts
 class MemoAdapter(private val itemList: List<Contacts>) :
     RecyclerView.Adapter<MemoAdapter.ContactsViewHolder>() {
 
+    var checkBoxCode = MemoF2.chekBoxCode
+
     inner class ContactsViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         var db: AppDatabase? = null
+
 
         fun bind(contacts: Contacts) {
             val weight = view.findViewById<TextView>(R.id.weightItem)
@@ -44,20 +47,31 @@ class MemoAdapter(private val itemList: List<Contacts>) :
             val imm = context.getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
             db = AppDatabase.getInstance(context)
 
-            while (true) {
-                if (year.text.toString() != MemoF2.currentYear.toString() || month.text.toString() != MemoF2.currentMonth.toString()) {
-                    listItem.visibility = View.GONE
-                    break
-                } else if (year.text.toString() == MemoF2.currentYear.toString() && month.text.toString() == MemoF2.currentMonth.toString()) {
-                    listItem.visibility = View.VISIBLE
-                    break
+            if (checkBoxCode == 1) {
+                Log.d("sex2", checkBoxCode.toString())
+                listItem.visibility = View.VISIBLE
+            }
+
+            if (checkBoxCode == 0) {
+                while (true) {
+
+                    if (year.text.toString() != MemoF2.currentYear.toString() || month.text.toString() != MemoF2.currentMonth.toString()) {
+                        listItem.visibility = View.GONE
+                        break
+                    } else if (year.text.toString() == MemoF2.currentYear.toString() && month.text.toString() == MemoF2.currentMonth.toString()) {
+                        listItem.visibility = View.VISIBLE
+                        break
+                    }
                 }
             }
+
+
 
             deleteButton.setOnClickListener {
                 db?.contactsDao()?.delete(contacts)
                 (context as MainActivity).setFrag(2)
             }
+
 
             memoTextView.setOnClickListener {
                 memoEditText.setText(memoTextView.text.toString())
