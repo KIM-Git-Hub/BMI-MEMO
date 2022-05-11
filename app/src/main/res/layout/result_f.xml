@@ -11,31 +11,36 @@
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:src="@drawable/bmi_1"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:contentDescription="@string/underWight" />
     <ImageView
         android:layout_width="200dp"
         android:id="@+id/bmi_2"
         android:layout_height="100dp"
         android:src="@drawable/bmi_2"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:contentDescription = "@string/normalWeight" />
     <ImageView
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:id="@+id/bmi_3"
         android:src="@drawable/bmi_3"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:contentDescription="@string/overWeight" />
     <ImageView
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:id="@+id/bmi_4"
         android:src="@drawable/bmi_4"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:contentDescription="@string/obesity" />
     <ImageView
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:id="@+id/bmi_5"
         android:src="@drawable/bmi_5"
-        android:visibility="gone" />
+        android:visibility="gone"
+        android:contentDescription="@string/superObesity" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -50,14 +55,16 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:text="BMI " />
+            android:text="@string/bmi"
+            android:layout_marginEnd="5dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_height="wrap_content"
-          android:text="( "/>
+          android:text="@string/bracketS"
+            android:layout_marginEnd="5dp"/>
 
         <TextView
             android:id="@+id/bmiNum"
@@ -65,14 +72,15 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:layout_height="wrap_content"
-            tools:text="실험" />
+            tools:text="testNum" />
 
         <TextView
             android:layout_width="wrap_content"
             android:textColor="@color/black"
             android:textSize="20sp"
+            android:layout_marginStart="5dp"
             android:layout_height="wrap_content"
-            android:text=" )"/>
+            android:text="@string/bracketE"/>
 
 
     </LinearLayout>
@@ -81,13 +89,14 @@
         android:id="@+id/addMemoButton"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="기록" />
+        android:text="@string/memo" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:src="@drawable/bmi_level" />
+        android:src="@drawable/bmi_level"
+        android:contentDescription="@string/allBmi" />
 
 
 </LinearLayout>

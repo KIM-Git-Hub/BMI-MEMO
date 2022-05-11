@@ -2,7 +2,6 @@ package com.jaeyoung1.bmi_chap01
 
 
 import android.content.Context.INPUT_METHOD_SERVICE
-import android.util.Log
 import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
@@ -17,7 +16,7 @@ class MemoAdapter(private val itemList: List<Contacts>) :
     var allMemoCode = MemoF2.allMemoCode
 
     inner class ContactsViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
-        var db: AppDatabase? = null
+        private var db: AppDatabase? = null
 
 
         fun bind(contacts: Contacts) {
@@ -47,7 +46,6 @@ class MemoAdapter(private val itemList: List<Contacts>) :
             db = AppDatabase.getInstance(context)
 
             if (allMemoCode == 1) {
-                Log.d("sex2", allMemoCode.toString())
                 listItem.visibility = View.VISIBLE
             }
 
@@ -73,17 +71,23 @@ class MemoAdapter(private val itemList: List<Contacts>) :
 
 
             memoTextView.setOnClickListener {
-                memoEditText.setText(memoTextView.text.toString())
-                memoTextView.visibility = View.GONE
-                memoEditText.visibility = View.VISIBLE
-                memoEditText.requestFocus()
-
-                imm.showSoftInput(memoEditText, 0) // 키보드 올라옴
+                if(memoTextView.text == "MEMO"){
+                    memoEditText.setText("")
+                    memoTextView.visibility = View.GONE
+                    memoEditText.visibility = View.VISIBLE
+                    memoEditText.requestFocus()
+                    imm.showSoftInput(memoEditText, 0)
+                }else{
+                    memoEditText.setText(memoTextView.text)
+                    memoTextView.visibility = View.GONE
+                    memoEditText.visibility = View.VISIBLE
+                    memoEditText.requestFocus()
+                    imm.showSoftInput(memoEditText, 0) // 키보드 올라옴
+                }
             }
 
             memoEditText.setOnKeyListener(View.OnKeyListener { v, keyCode, event -> // 엔터로 키보드 내리기 & 저장
                 if (event.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
-
                     imm.hideSoftInputFromWindow(memoEditText.windowToken, 0) //키보드 내리기
 
                     memoTextView.text = memoEditText.text

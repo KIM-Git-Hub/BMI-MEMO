@@ -26,6 +26,7 @@ class MemoF2 : Fragment() {
     private var mBinding: Memof2Binding? = null
     private val binding get() = mBinding!!
 
+    //
 
     private var db: AppDatabase? = null
     private var contactsList = mutableListOf<Contacts>()

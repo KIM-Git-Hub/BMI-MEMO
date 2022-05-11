@@ -1,3 +1,32 @@
 <resources>
     <string name="logo">BMI-MEMO</string>
+    　　　
+    <string name="height">身長</string>
+    <string name="weight">体重</string>
+    <string name="bmi">BMI</string>
+
+    <string name="underWight">underWeight</string>
+    <string name="normalWeight">normalWeight</string>
+    <string name="overWeight">overWeight</string>
+    <string name="obesity">obesity</string>
+    <string name="superObesity">superObesity</string>
+    <string name="bracketS">(</string>
+    <string name="bracketE">)</string>
+    <string name="memo">メモ</string>
+    <string name="allBmi">allBmi</string>
+
+    <string name="all">ALL</string>
+
+    <string name="cancelButton">キャンセル</string>
+    <string name="okButton">OK</string>
+
+    <string name="dialogText">メモする</string>
+
+    <string name="home">ホーム</string>
+
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="kg">kg</string>
+    <string name="deleteImage">deleteImage</string>
 </resources>

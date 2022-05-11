@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -17,14 +18,16 @@
             android:id="@+id/addDatePicker"
             android:layout_width="200dp"
             android:layout_height="50dp"
-            android:layout_marginEnd="30dp"/>
+            android:layout_marginEnd="30dp"
+            tools:ignore="ButtonStyle" />
 
         <Button
             android:id="@+id/allMemoButton"
             android:layout_width="100dp"
             android:layout_height="50dp"
             android:layout_gravity="end"
-            android:text="ALL" />
+            android:text="@string/all"
+            tools:ignore="ButtonStyle" />
 
 
     </LinearLayout>

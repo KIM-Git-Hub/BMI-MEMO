@@ -6,7 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.facebook.stetho.Stetho
 import com.jaeyoung1.bmi_chap01.databinding.ActivityMainBinding
-import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
     // 전역 변수로 바인딩 객체 선언
@@ -30,18 +30,18 @@ class MainActivity : AppCompatActivity() {
 
         //프래그먼트 세팅
         setFrag(0)
-        binding.bottomNavigation.setOnNavigationItemSelectedListener {
+        binding.bottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.fragHome -> {
                     setFrag(0)
-                    return@setOnNavigationItemSelectedListener true
+                    return@setOnItemSelectedListener true
                 }
                 R.id.fragMemo -> {
                     setFrag(2)
-                    return@setOnNavigationItemSelectedListener true
+                    return@setOnItemSelectedListener true
                 }
             }
-            return@setOnNavigationItemSelectedListener false
+            return@setOnItemSelectedListener  false
         }
 
 
@@ -65,7 +65,7 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         if (System.currentTimeMillis() - mBackWait >= 2000) {
             mBackWait = System.currentTimeMillis()
-            Toast.makeText(this, "뒤로가기 버튼을 한번 더 누르면 종료됩니다.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "もう一度押す場合、アプリを終了します。", Toast.LENGTH_SHORT).show()
         } else {
             finish()
         }
