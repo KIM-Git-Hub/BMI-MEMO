@@ -4,11 +4,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/whitelogo"
+        android:icon="@drawable/white_logo"
         android:label="@string/logo"
-        android:roundIcon="@drawable/whitelogo"
+        android:roundIcon="@drawable/white_logo"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Bmichap01">
+        android:theme="@style/Theme.bmiChap01">
         <activity android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan"
             android:exported="true">

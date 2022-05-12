@@ -10,77 +10,89 @@
         android:id="@+id/bmi_1"
         android:layout_width="200dp"
         android:layout_height="100dp"
+        android:contentDescription="@string/underWight"
         android:src="@drawable/bmi_1"
-        android:visibility="gone"
-        android:contentDescription="@string/underWight" />
+        android:visibility="gone" />
+
     <ImageView
-        android:layout_width="200dp"
         android:id="@+id/bmi_2"
+        android:layout_width="200dp"
         android:layout_height="100dp"
+        android:contentDescription="@string/normalWeight"
         android:src="@drawable/bmi_2"
-        android:visibility="gone"
-        android:contentDescription = "@string/normalWeight" />
+        android:visibility="gone" />
+
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
         android:id="@+id/bmi_3"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/obesity"
         android:src="@drawable/bmi_3"
-        android:visibility="gone"
-        android:contentDescription="@string/overWeight" />
+        android:visibility="gone" />
+
     <ImageView
-        android:layout_width="200dp"
-        android:layout_height="100dp"
         android:id="@+id/bmi_4"
-        android:src="@drawable/bmi_4"
-        android:visibility="gone"
-        android:contentDescription="@string/obesity" />
-    <ImageView
         android:layout_width="200dp"
         android:layout_height="100dp"
+        android:contentDescription="@string/obesity2"
+        android:src="@drawable/bmi_4"
+        android:visibility="gone" />
+
+    <ImageView
         android:id="@+id/bmi_5"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/obesity3"
         android:src="@drawable/bmi_5"
-        android:visibility="gone"
-        android:contentDescription="@string/superObesity" />
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/bmi_6"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/obesity4"
+        android:src="@drawable/bmi_6"
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
+        android:gravity="center"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="20sp"
+            android:layout_marginEnd="5dp"
             android:text="@string/bmi"
-            android:layout_marginEnd="5dp"/>
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="20sp"
             android:layout_height="wrap_content"
-          android:text="@string/bracketS"
-            android:layout_marginEnd="5dp"/>
+            android:layout_marginEnd="5dp"
+            android:text="@string/bracketS"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/bmiNum"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_height="wrap_content"
             tools:text="testNum" />
 
         <TextView
             android:layout_width="wrap_content"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:layout_marginStart="5dp"
             android:layout_height="wrap_content"
-            android:text="@string/bracketE"/>
+            android:layout_marginStart="5dp"
+            android:text="@string/bracketE"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
 
 
     </LinearLayout>
@@ -91,12 +103,12 @@
         android:layout_height="50dp"
         android:text="@string/memo" />
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
 
-        android:src="@drawable/bmi_level"
-        android:contentDescription="@string/allBmi" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:contentDescription="@string/allBmi"
+        android:src="@drawable/bmi_level" />
 
 
 </LinearLayout>

@@ -2,16 +2,18 @@ package com.jaeyoung1.bmi_chap01
 
 
 import android.content.Context.INPUT_METHOD_SERVICE
+import android.util.Log
 import android.view.*
 import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
+import com.jaeyoung1.bmi_chap01.MemoAdapter.ContactsViewHolder
 import com.jaeyoung1.bmi_chap01.Roomdb.AppDatabase
 import com.jaeyoung1.bmi_chap01.Roomdb.Contacts
 
 
 class MemoAdapter(private val itemList: List<Contacts>) :
-    RecyclerView.Adapter<MemoAdapter.ContactsViewHolder>() {
+    RecyclerView.Adapter<ContactsViewHolder>() {
 
     var allMemoCode = MemoF2.allMemoCode
 
@@ -63,7 +65,6 @@ class MemoAdapter(private val itemList: List<Contacts>) :
             }
 
 
-
             deleteButton.setOnClickListener {
                 db?.contactsDao()?.delete(contacts)
                 (context as MainActivity).setFrag(2)
@@ -71,13 +72,13 @@ class MemoAdapter(private val itemList: List<Contacts>) :
 
 
             memoTextView.setOnClickListener {
-                if(memoTextView.text == "MEMO"){
+                if (memoTextView.text == "MEMO") {
                     memoEditText.setText("")
                     memoTextView.visibility = View.GONE
                     memoEditText.visibility = View.VISIBLE
                     memoEditText.requestFocus()
                     imm.showSoftInput(memoEditText, 0)
-                }else{
+                } else {
                     memoEditText.setText(memoTextView.text)
                     memoTextView.visibility = View.GONE
                     memoEditText.visibility = View.VISIBLE
@@ -111,10 +112,10 @@ class MemoAdapter(private val itemList: List<Contacts>) :
                 val value = memoEditText.text.toString()
                 db?.contactsDao()?.update(id, value)
                 (context as MainActivity).setFrag(2)
-
-
             }
 
+
+            
         }
     }
 
@@ -126,7 +127,7 @@ class MemoAdapter(private val itemList: List<Contacts>) :
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): MemoAdapter.ContactsViewHolder {
+    ): ContactsViewHolder {
         val inflatedView =
             LayoutInflater.from(parent.context).inflate(R.layout.list_item, parent, false)
         return ContactsViewHolder(inflatedView)

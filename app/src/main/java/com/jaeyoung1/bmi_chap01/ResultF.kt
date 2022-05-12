@@ -29,20 +29,21 @@ class ResultF : Fragment() {
         val bmi: Double = weightValue / ((heightValue * 0.01) * (heightValue * 0.01))
 
         val resultText = when {
-            bmi >= 40 -> "肥満（4度）"
-            bmi >= 35 -> "肥満（3度）"
-            bmi >= 30 -> "肥満（2度）"
-            bmi >= 25 -> "肥満（1度）"
+            bmi >= 40 -> "肥満(4度)"
+            bmi >= 35 -> "肥満(3度)"
+            bmi >= 30 -> "肥満(2度)"
+            bmi >= 25 -> "肥満(1度)"
             bmi > 18.5 -> "普通体重"
             else -> "低体重"
         }
 
         when (resultText) {
-            "고도비만" -> binding.bmi5.visibility = View.VISIBLE
-            "비만" -> binding.bmi4.visibility = View.VISIBLE
-            "과체중" -> binding.bmi3.visibility = View.VISIBLE
-            "정상체중" -> binding.bmi2.visibility = View.VISIBLE
-            "저체중" -> binding.bmi1.visibility = View.VISIBLE
+            "肥満(4度)" -> binding.bmi6.visibility = View.VISIBLE
+            "肥満(3度)" -> binding.bmi5.visibility = View.VISIBLE
+            "肥満(2度)" -> binding.bmi4.visibility = View.VISIBLE
+            "肥満(1度)" -> binding.bmi3.visibility = View.VISIBLE
+            "普通体重" -> binding.bmi2.visibility = View.VISIBLE
+            "低体重" -> binding.bmi1.visibility = View.VISIBLE
         }
 
 

@@ -2,7 +2,6 @@ package com.jaeyoung1.bmi_chap01
 
 import android.app.AlertDialog
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -34,21 +33,22 @@ class MemoF2 : Fragment() {
     private var weightMemo = ""
     private var bmiNumMemo = ""
     private var bmiStringMemo = ""
+    private val defaultText = "MEMO"
     private var toMemoF2Code = 0
-
     private var selectYear = ""
     private var selectMonth = ""
 
     companion object {
-        val c = Calendar.getInstance()
-        var currentYear = c.get(Calendar.YEAR)
-        var currentMonth = c.get(Calendar.MONTH) + 1
+        val calendar: Calendar? = Calendar.getInstance()
+        var currentYear = calendar!!.get(Calendar.YEAR)
+        var currentMonth = calendar!!.get(Calendar.MONTH) + 1
         var allMemoCode = 0
     }
-    private val currentMonth2 = c.get(Calendar.MONTH) + 1
+    private val currentMonth2 = calendar!!.get(Calendar.MONTH) + 1
+    private val currentYear2 = calendar!!.get(Calendar.YEAR)
 
-    private val currentDay = c.get(Calendar.DAY_OF_MONTH)
-    var currentDate = "$currentYear" + "년" + " " + "$currentMonth" + "월"
+    private val currentDay = calendar!!.get(Calendar.DAY_OF_MONTH)
+    private var currentDate = "$currentYear" + "年" + " " + "$currentMonth" + "月"
 
     private val adapter = MemoAdapter(contactsList)
 
@@ -97,7 +97,7 @@ class MemoF2 : Fragment() {
                         weightMemo,
                         bmiNumMemo,
                         bmiStringMemo,
-                        "ㅎㅇ",
+                        defaultText,
                         currentYear.toString(),
                         currentMonth2.toString(),
                         currentDay.toString()
@@ -106,6 +106,7 @@ class MemoF2 : Fragment() {
                 db?.contactsDao()?.insertAll(contact) //DB에 추가
                 contactsList.add(contact) //리스트 추가
                 adapter.addItem()
+                (activity as MainActivity).setFrag(2)
                 mAlertDialog.dismiss()
 
             }
@@ -117,6 +118,9 @@ class MemoF2 : Fragment() {
         }
 
         allMemoButton()
+
+
+
 
         return binding.root
     }
@@ -148,12 +152,11 @@ class MemoF2 : Fragment() {
     private fun allMemoButton() {
         binding.allMemoButton.setOnClickListener {
             allMemoCode = 1
-            Log.d("A", "A")
             (activity as MainActivity).setFrag(2)
             allMemoCode = 0
-
         }
     }
+
 
 
     private fun customDaterPicker() {
@@ -183,7 +186,7 @@ class MemoF2 : Fragment() {
         month.maxValue = 12
 
         //처음 박혀잇을 숫자 정하기
-        year.value = currentYear
+        year.value = currentYear2
         month.value = currentMonth2
 
         cancelButton.setOnClickListener {
