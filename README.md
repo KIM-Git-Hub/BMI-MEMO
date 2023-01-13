@@ -8,7 +8,7 @@ Google Play ストア : https://play.google.com/store/apps/details?id=com.jaeyou
 # Usage
 <img src="https://user-images.githubusercontent.com/100995721/211462242-8e2bca05-0949-460d-bfdd-d103958fc087.jpg" width="30%" height="30%">
 （ホーム画面）<br/>
-１．身長と体重を作成し、BMIボタンをクリックする。（BMI測定結果画面に移動）<br/> 
+１．身長と体重を作成、BMIボタンをクリックする。（BMI測定結果画面に移動）<br/> 
 ２．下端部のナビゲーションボタンでホーム画面・メモ画面に移動<br/><br/>
 <img src="https://user-images.githubusercontent.com/100995721/211462240-2d7c0683-c8b4-476e-96fb-6ef60c020165.jpg" width="30%" height="30%">
 （BMI測定結果画面）<br/>
