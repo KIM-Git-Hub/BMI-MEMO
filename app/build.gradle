@@ -10,7 +10,7 @@ apply plugin: 'kotlin-kapt'
 
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
     buildToolsVersion "30.0.3"
 
     // 뷰 바인딩
@@ -22,7 +22,7 @@ android {
     defaultConfig {
         applicationId "com.jaeyoung1.bmi_chap01"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
 
