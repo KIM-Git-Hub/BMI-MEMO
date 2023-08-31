@@ -56,7 +56,7 @@ class ResultF : Fragment() {
 
             EventBus.getDefault().postSticky(
                 ResultF2toMemoF2BusEventItem(
-                    heightValue.toString(),
+                    weightValue.toString(), //08.31 記入ミス - heightValue -> weightValue
                     bmiNumValue,
                     resultText,
                     1

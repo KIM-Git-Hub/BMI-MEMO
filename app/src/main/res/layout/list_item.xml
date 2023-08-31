@@ -14,7 +14,6 @@
         android:layout_height="wrap_content"
         android:padding="10dp"
         android:background="@drawable/memo"
-
         android:orientation="vertical"
         android:id="@+id/list_item"
         tools:ignore="UselessParent">
