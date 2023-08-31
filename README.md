@@ -4,7 +4,9 @@
 利用者の健康を記録し、管理するために開発したアプリケーションです。 <br/> 
 # Installation
 <img src="https://user-images.githubusercontent.com/100995721/210514241-c49ebe27-8f74-4a3d-85bd-316c25925b6b.png"  width="200" height="200">
-Google Play ストア : https://play.google.com/store/apps/details?id=com.jaeyoung1.bmi_chap01
+Google Play ストア : https://play.google.com/store/apps/details?id=com.jaeyoung1.bmi_chap01<br/> 
+（アプリケーション更新予定・記入ミスやSdkVersion修正）<br/> <br/> 
+
 
 # Usage
 <img src="https://user-images.githubusercontent.com/100995721/211462242-8e2bca05-0949-460d-bfdd-d103958fc087.jpg" width="30%" height="30%">
