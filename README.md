@@ -24,7 +24,6 @@ Google Play ストア : https://play.google.com/store/apps/details?id=com.jaeyou
 ７．ALLボタンをクリック、全てのメモを表示する。<br/><br/>
 
 # Library
-Navigation<br/> <br/> 
 RoomDataBase<br/> <br/> 
 RecyclerView<br/> <br/> 
 EventBus<br/> <br/> 
